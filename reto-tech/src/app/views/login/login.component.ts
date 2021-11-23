@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   loginForm = new FormGroup({
-    email: new FormControl('',Validators.required),
+    username: new FormControl('',Validators.required),
     password : new FormControl('',Validators.required)
   })
 
@@ -21,40 +21,15 @@ export class LoginComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.checkLocalStorage();
   }
 
-  checkLocalStorage(){
-    if(localStorage.getItem('token')){
-      this.router.navigate(['/home'])
-    }}
-
   login() {
-  //   alert('hola bandida')
-  //   this.authService.Login(this.loginForm.value).subscribe(
-  //     data => console.log('success', data),
-  //     error => alert(error.error.message))
-  // }
-
-    this.authService.Login(this.loginForm.value).subscribe(
-      data => {
-        console.log(data.token)
-        localStorage.setItem('token',data.token)
-        const user:any = jwt(data.token);
-        console.log(user)
-        const userId = user.id;
-        localStorage.setItem('userId', userId)
-        console.log(user)
+    this.authService.Login(this.loginForm.value).subscribe(data => {
+        localStorage.setItem('token',JSON.stringify(data))
+        this.router.navigate(['/home'])
       },
-      error => {
-        if(error.status > 400){
-        alert('Por favor verifIque los campos')
-        }
-        else if (error.status == 400){
-          alert('Por favor complete los campos')
-        }
-      })
+      error => alert(error.error.message))
+  }
 }
 
-}
 

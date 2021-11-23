@@ -4,9 +4,9 @@
         <h3>Get's started</h3>
         <form [formGroup]="loginForm" (ngSubmit)="login()">
             <label for="email">Email address</label>
-            <input type="text" id="email" formControlName="email" placeholder="Ingresa tu email">
+            <input type="text" id="username" formControlName="username" placeholder="Ingresa tu usuario">
             <label for="password">Password</label>
-            <input type="password" id="password" formControlName="password" placeholder="Ingresa tu password">
+            <input type="password" id="password" formControlName="password" placeholder="Ingresa tu contraseña">
             <button type="submit" > Sing In</button>
         </form>
 
