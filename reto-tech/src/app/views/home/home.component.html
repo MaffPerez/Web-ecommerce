@@ -11,5 +11,6 @@
 
 
 </main> -->
-<app-all-products></app-all-products>
+<app-search-products (searchEmitter)="search = $event"></app-search-products>
+<app-all-products [getSearch]="search"></app-all-products>
 <app-footer></app-footer>

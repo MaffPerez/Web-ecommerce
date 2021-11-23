@@ -12,8 +12,27 @@
                 </div>
 
             <div class="container-info">
-                <p>product-name</p>
+                <p>{{item.title}}</p>
                 <p>{{item.price}}</p>
                 </div>
     </div>
 </section>
+<ng-template #template>
+    <section class="container-allProducts">
+        <div class="container-products" *ngFor="let product of filteredProducts">
+            <div class="container-header-prod">
+                <p>30%OFF</p>
+                    <i class="fas fa-heart"></i>
+                </div>
+    
+                <div class="img-products-container">
+                    <img class="img-products" src="{{product.image}}">
+                    </div>
+    
+                <div class="container-info">
+                    <p>{{product.title}}</p>
+                    <p>{{product.price}}</p>
+                    </div>
+        </div>
+    </section>
+</ng-template>
