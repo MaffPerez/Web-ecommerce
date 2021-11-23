@@ -1,0 +1,19 @@
+
+<!------------------ Productos -------------------->
+<section class="container-allProducts">
+    <div class="container-products" *ngFor="let item of data">
+        <div class="container-header-prod">
+            <p>30%OFF</p>
+                <i class="fas fa-heart"></i>
+            </div>
+
+            <div class="img-products-container">
+                <img class="img-products" src="{{item.image}}">
+                </div>
+
+            <div class="container-info">
+                <p>product-name</p>
+                <p>{{item.price}}</p>
+                </div>
+    </div>
+</section>

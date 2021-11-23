@@ -9,6 +9,9 @@ import { LoginComponent } from './views/login/login.component';
 import { HomeComponent } from './views/home/home.component';
 import { ShoppingCartComponent } from './views/shopping-cart/shopping-cart.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SearchProductsComponent } from './components/search-products/search-products.component';
+import { FilterProductsComponent } from './components/filter-products/filter-products.component';
+import { AllProductsComponent } from './components/all-products/all-products.component';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     ShoppingCartComponent,
     FooterComponent,
+    SearchProductsComponent,
+    FilterProductsComponent,
+    AllProductsComponent,
   ],
   imports: [
     BrowserModule,
