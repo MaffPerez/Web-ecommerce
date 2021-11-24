@@ -2,33 +2,26 @@
 <!------------------ Tarjetas de los Productos -------------------->
 <section class="container-allProducts" *ngIf="filteredProducts.length<1; else template">
     <div class="container-products" *ngFor="let item of data" (click)="addCart(item.id, item)">
-        <div class="container-header-prod">
-                    <i class="fas fa-heart"></i>
-            </div>
 
             <div class="img-products-container">
                 <img class="img-products" src="{{item.image}}">
                 </div>
 
             <div class="container-info">
-                <p>{{item.title}}</p>
-                <p>${{item.price}}</p>
+                <p>{{item.title | slice:0:20}}</p>
+                <p class="tag-price">${{item.price}}</p>
                 </div>
     </div>
 </section>
 <ng-template #template>
     <section class="container-allProducts">
         <div class="container-products" *ngFor="let product of filteredProducts">
-            <div class="container-header-prod">
-                <p>30%OFF</p>
-                    <i class="fas fa-heart"></i>
-                </div>
                 <div class="img-products-container">
                     <img class="img-products" src="{{product.image}}">
                     </div>
                 <div class="container-info">
-                    <p>{{product.title | slice:0:29}}</p>
-                    <p>${{product.price}}</p>
+                    <p>{{product.title | slice:0:20}}</p>
+                    <p class="tag-price">${{product.price}}</p>
                     </div>
         </div>
     </section>

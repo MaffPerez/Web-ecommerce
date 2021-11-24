@@ -14,7 +14,7 @@ export class AllProductsComponent implements OnInit, OnChanges {
   getClass:string = '';
   constructor(private productsService: ProductsService) { }
 
-  data:Array<any> = []
+  data:any[] = []
   filteredProducts:any[] = [];
   cart: any[] = [];
 
@@ -45,11 +45,11 @@ export class AllProductsComponent implements OnInit, OnChanges {
     const productSelected = this.cart.find((product) => product.id == id);
     if(productSelected === undefined){
       this.cart.push({
-        id,
-        data
+        data,
+        amount:1
       })
       console.log(this.cart)
+      localStorage.setItem('cart', JSON.stringify(this.cart))
     }
-    localStorage.setItem('cart', JSON.stringify(this.cart))
   }
 }

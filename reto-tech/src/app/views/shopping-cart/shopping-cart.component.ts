@@ -9,18 +9,23 @@ export class ShoppingCartComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  datacart: any[] = [];
+  cart: any[] = [];
 
   ngOnInit(): void {
-    const dataCart =JSON.parse(localStorage.getItem('cart') ||'[]');
-    this.datacart.push(dataCart);
-    console.log(dataCart);
+    this.getCart();
   }
 
   btnBack() {
     this.router.navigate(['home']);
   }
 
+  getCart(){
+    const dataCart =JSON.parse(localStorage.getItem('cart') ||'{}');
+    this.cart = dataCart;
+    console.log(dataCart);
+  }
 
-
+  changeAmount(){
+    
+  }
 }

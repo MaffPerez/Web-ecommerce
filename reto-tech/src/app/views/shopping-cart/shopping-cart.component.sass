@@ -1,2 +1,53 @@
-p
-    color: black
+// ------------------- Estilos del header del carrito-------------------
+.container-headerpage
+    display: flex
+h2
+    text-align: center
+    font-family: "Poppins", sans-serif
+button
+    border: none
+    outline: none
+    background: transparent
+    cursor: pointer
+    .fa-arrow-left
+        font-size: 30px
+        margin-right: 100px
+
+
+// ------------------- Estilos del contenedor de tarjetas -------------------
+.container-allcardsProd
+    display: flex
+    grid-gap: 20px
+    padding: 10px
+    flex-direction: column
+    justify-content: center
+    align-items: stretch
+
+// ------------------- Estilos de las tarjetas -------------------
+.container-cardProd
+    background-color: #F8F8F8
+    border-radius: 20px
+    display: flex
+    align-items: center
+    justify-content: space-around
+    height: 140px
+.img-products-container
+    position: relative
+    width: 100px
+    height: 100px
+    overflow: hidden
+    background: #F8F8F8
+    .img-products
+        width: 60px
+        position: absolute
+        left: -100%
+        right: -100%
+        top: -100%
+        bottom: -100%
+        margin: auto
+.products-info
+    p
+        font-family: "Poppins", sans-serif
+.price-tag
+    font-weight: 700
+    font-size: 20px
