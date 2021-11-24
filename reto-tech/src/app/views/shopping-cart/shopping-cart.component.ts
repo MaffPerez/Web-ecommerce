@@ -7,12 +7,15 @@ import { Router } from '@angular/router';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  constructor(private router: Router) { }
-
+  base: number = 1;
+  total: number = 0;
   cart: any[] = [];
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.getCart();
+    this.getTotalAmount();
   }
 
   btnBack() {
@@ -25,7 +28,23 @@ export class ShoppingCartComponent implements OnInit {
     console.log(dataCart);
   }
 
-  changeAmount(){
-    
+  changeQuantity(base:number, item:any){
+    if (item.amount + base < 1) {
+      item.amount === 1;
+    } else {
+      item.amount += base;
+    }
+    this.getTotalAmount();
+  }
+
+  getTotalAmount(){
+    this.total = this.cart
+    .map((item: { amount: number; data: { price:number} }) => item.amount * item.data.price)
+    .reduce((acc: any, item: any) => (acc += item), 0);
+  }
+
+  deleteProduct(id:string){
+    this.cart = this.cart.filter((product:{data:{id:string} }) => product.data.id !== id)
+    this.getTotalAmount();
   }
 }
