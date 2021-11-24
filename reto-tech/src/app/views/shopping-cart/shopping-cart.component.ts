@@ -12,7 +12,7 @@ export class ShoppingCartComponent implements OnInit {
   datacart: any[] = [];
 
   ngOnInit(): void {
-    const dataCart =JSON.parse(localStorage.getItem('cart') || '{}');
+    const dataCart =JSON.parse(localStorage.getItem('cart') ||'[]');
     this.datacart.push(dataCart);
     console.log(dataCart);
   }
