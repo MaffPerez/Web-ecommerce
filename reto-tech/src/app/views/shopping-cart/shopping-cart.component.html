@@ -1,1 +1,15 @@
-<p>shopping-cart works!</p>
+
+<main >
+
+    <section>
+        <div>
+            <button (click)="btnBack()">Regresar</button>
+            <h2>My cart</h2>
+        </div>
+    </section>
+
+    <div *ngFor="let item of datacart">
+            <p>{{item.id}}</p>
+    </div>
+
+</main>

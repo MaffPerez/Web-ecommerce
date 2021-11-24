@@ -1,7 +1,7 @@
 
-<!------------------ Productos -------------------->
+<!------------------ Tarjetas de los Productos -------------------->
 <section class="container-allProducts" *ngIf="filteredProducts.length<1; else template">
-    <div class="container-products" *ngFor="let item of data">
+    <div class="container-products" *ngFor="let item of data" (click)="addCart(item.id, item)">
         <div class="container-header-prod">
                     <i class="fas fa-heart"></i>
             </div>
@@ -23,14 +23,12 @@
                 <p>30%OFF</p>
                     <i class="fas fa-heart"></i>
                 </div>
-    
                 <div class="img-products-container">
                     <img class="img-products" src="{{product.image}}">
                     </div>
-    
                 <div class="container-info">
                     <p>{{product.title | slice:0:29}}</p>
-                    <p>{{product.price}}</p>
+                    <p>${{product.price}}</p>
                     </div>
         </div>
     </section>
