@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter-products',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterProductsComponent implements OnInit {
 
+  @Output()
+  sendClass: EventEmitter<string> = new EventEmitter<string>() 
+
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  getClass($event:any){
+    this.sendClass.emit($event.target.classList.toString());
+  }
 }

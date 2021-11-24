@@ -26,6 +26,8 @@ export class AllProductsComponent implements OnInit, OnChanges {
 
   ngOnChanges():void {
     this.search();
+    this.filterProducts();
+    console.log(this.data)
   }
 
   search() {

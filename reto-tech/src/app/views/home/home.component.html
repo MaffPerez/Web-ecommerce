@@ -1,16 +1,4 @@
-<!-- <main>
-
-
-    <section>
-        <h2>Hello Rocky</h2>
-    </section>
-
-    <section>
-        <h2>Top categories</h2>
-    </section>
-
-
-</main> -->
 <app-search-products (searchEmitter)="search = $event"></app-search-products>
-<app-all-products [getSearch]="search"></app-all-products>
+<app-filter-products (sendClass)="class = $event"></app-filter-products>
+<app-all-products [getClass]="class" [getSearch]="search"></app-all-products>
 <app-footer></app-footer>

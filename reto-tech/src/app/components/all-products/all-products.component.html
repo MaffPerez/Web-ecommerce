@@ -1,10 +1,9 @@
 
 <!------------------ Productos -------------------->
-<section class="container-allProducts">
+<section class="container-allProducts" *ngIf="filteredProducts.length<1; else template">
     <div class="container-products" *ngFor="let item of data">
         <div class="container-header-prod">
-            <p>30%OFF</p>
-                <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
             </div>
 
             <div class="img-products-container">
@@ -13,7 +12,7 @@
 
             <div class="container-info">
                 <p>{{item.title}}</p>
-                <p>{{item.price}}</p>
+                <p>${{item.price}}</p>
                 </div>
     </div>
 </section>
@@ -30,7 +29,7 @@
                     </div>
     
                 <div class="container-info">
-                    <p>{{product.title}}</p>
+                    <p>{{product.title | slice:0:29}}</p>
                     <p>{{product.price}}</p>
                     </div>
         </div>
