@@ -5,7 +5,7 @@
 * [1. Resumen](#1-resumen)
 * [2. Historias de Usuario](#2-historias-de-usuario)
 * [3. Prototipado](#3-prototipado)
-* [4. Página web](#4-página-web)
+
 
 ***
 
