@@ -24,6 +24,7 @@ Yo como usuario con cuenta quiero logearme en la página para poder ver los prod
 
 *Criterios de aceptación
 - Entar con cuenta creada
+- Ver los productos mediante tarjetas
 - Se ve bien en mobile
 
 Historia de usuario 2: Usuario que desea filtrar y añadir productos al carrito
