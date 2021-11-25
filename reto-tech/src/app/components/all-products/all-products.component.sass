@@ -1,3 +1,4 @@
+$medium: 900px
 main
     height: 100vw
     font-family: "Poppins", sans-serif
@@ -20,7 +21,6 @@ main
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%)
     padding: 9px
     width: 150px
-    cursor: pointer
     flex-direction: column
     justify-content: center
     align-items: center
@@ -70,6 +70,7 @@ p
     border-radius: 10px
     padding: 10px
     width: 90%
+    cursor: pointer
 .btn-add-active
     background: white
     color: #FF9A62
@@ -99,3 +100,26 @@ p
     cursor: pointer
 .fa-check-circle
     color: #FF9A62
+
+@media screen and (min-width: $medium)
+    .container-allcardsProd
+        align-items: center
+    .container-products
+        width: 370px
+        height: 460px
+        border-radius: 40px
+        gap: 30px
+    .img-products-container
+        width: 200px
+        height: 250px
+        .img-products
+            width: 150px
+    p
+        font-size: 20px
+    .tag-price
+        font-size: 24px
+    .btn-add,.btn-add-active
+        padding: 20px
+        font-size: 20px
+    .container-card
+        width: 60%

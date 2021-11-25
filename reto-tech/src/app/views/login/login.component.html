@@ -1,8 +1,10 @@
 
     <main>
-        <img src="../assets/img/login.svg">
-        <h3>Get's started</h3>
+        <figure>
+            <img src="../assets/img/login.svg">
+        </figure>
         <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <h3>Get's started</h3>
             <label for="email">Email address</label>
             <input type="text" id="username" formControlName="username" placeholder="Ingresa tu usuario">
             <label for="password">Password</label>

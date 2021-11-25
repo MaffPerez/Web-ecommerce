@@ -20,7 +20,7 @@
                         <p class="price-tag">${{product.data.price * product.amount | number: '1.0-2'}}</p>
                     <div class="container-btns">
                         <button (click)="changeQuantity(base,product)">+</button>
-                        <button>{{product.amount}}</button>
+                        <button class="btn-amount">{{product.amount}}</button>
                         <button (click)="changeQuantity(-base,product)">-</button>
                     </div>
                     </div>
