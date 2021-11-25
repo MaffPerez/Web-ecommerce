@@ -39,9 +39,9 @@ Yo como usuario quiero poder filtrar los productos por categoria para poder enco
 
 ## 3. Prototipo de alta fidelidad
 Se realizó el prototipado(mobile y dekstop) en Figma
-![alt text](../assets/img/mobile1.svg)
-![alt text](../assets/img/mobile2.svg)
-![alt text](../assets/img/mobile3.svg)
+![alt text](reto-tech/src/assets/img/mobile1.svg)
+![alt text](reto-tech/src/assets/img/mobile2.svg)
+![alt text](reto-tech/src/assets/img/mobile3.svg)
 
 ## 4. Pagina web
 Finalmente el resultado fue este:
