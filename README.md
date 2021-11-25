@@ -12,7 +12,7 @@
 ## 1. Resumen
 
 La lógica del proyecto esta implementada completamente en TypeScript, HTML y CSS y empaquetada de manera automatizada en el framework Angular 12. Utilizando datos de una API.
-La aplicación es un Single Page App. Mobile First
+La aplicación es un Single Page App. Mobile First. Desplegada en Netlify.
 - username: mor_2314
 - password: 83r5^_
 
