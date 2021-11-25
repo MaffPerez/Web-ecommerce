@@ -19,18 +19,21 @@ La aplicación es un Single Page App. Mobile First
 
 Historia de usuario 1: Usuario que desea observar los productos
 Yo como usuario con cuenta quiero logearme en la página para poder ver los productos
+
 *Criterios de aceptación
 - Entar con cuenta creada
 - Se ve bien en mobile
 
 Historia de usuario 2: Usuario que desea filtrar y añadir productos al carrito
 Yo como usuario quiero poder filtrar los productos por categoria para poder encontrarlos mas rápido y asi añadirlos al carrito de compras
+
 *Criterios de aceptación
 - Filtra por categoria
 - Añade productos al carrito
 
 Historia de usuario 2: Usuario que desea aumentar, disminuir y eliminar productos del carrito de compras
 Yo como usuario quiero poder filtrar los productos por categoria para poder encontrarlos mas rápido y asi añadirlos al carrito de compras
+
 *Criterios de aceptación
 - Añade productos con el boton +
 - Disminuye productos con el boton -
@@ -40,16 +43,17 @@ Yo como usuario quiero poder filtrar los productos por categoria para poder enco
 ## 3. Prototipo de alta fidelidad
 Se realizó el prototipado(mobile y dekstop) en Figma
 
+*Vista mobile:
+
 ![alt text](reto-tech/src/assets/img/mobile1.svg)
 
 ![alt text](reto-tech/src/assets/img/mobile2.svg)
 
 ![alt text](reto-tech/src/assets/img/mobile3.svg)
 
-## 4. Pagina web
-Finalmente el resultado fue este:
-![alt text](src/data/imagen/home.jpg)
-![alt text](src/data/imagen/pokedex.jpg)
-![alt text](src/data/imagen/filtros.jpg)
-![alt text](src/data/imagen/modal.jpg)
-![alt text](src/data/imagen/info.jpg)
+
+*Vista Dekstop:
+
+![alt text](reto-tech/src/assets/img/dekstop1.svg)
+
+![alt text](reto-tech/src/assets/img/dekstop2.svg)
