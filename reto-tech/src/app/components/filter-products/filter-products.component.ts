@@ -19,4 +19,7 @@ export class FilterProductsComponent implements OnInit {
   getClass($event:any){
     this.sendClass.emit($event.target.classList.toString());
   }
+
+
+
 }

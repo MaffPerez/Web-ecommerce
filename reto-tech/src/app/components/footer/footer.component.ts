@@ -19,4 +19,10 @@ export class FooterComponent implements OnInit {
   btnCart() {
     this.router.navigate(['shopping-cart']);
   }
+
+  btnLogOut (){
+    window.localStorage.clear();
+    alert('Hasta luego, vuelva pronto!');
+    this.router.navigate(['login']);
+  }
 }
