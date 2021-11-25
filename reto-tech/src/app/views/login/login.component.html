@@ -1,1 +1,15 @@
-<p>login works!</p>
+
+    <main>
+        <figure>
+            <img src="../assets/img/login.svg">
+        </figure>
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <h3>Get's started</h3>
+            <label for="email">Email address</label>
+            <input type="text" id="username" formControlName="username" placeholder="Ingresa tu usuario">
+            <label for="password">Password</label>
+            <input type="password" id="password" formControlName="password" placeholder="Ingresa tu contraseña">
+            <button type="submit" > Sing In</button>
+        </form>
+
+    </main>
