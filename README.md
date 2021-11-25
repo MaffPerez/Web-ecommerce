@@ -11,8 +11,7 @@
 
 ## 1. Resumen
 
-La lógica del proyecto esta implementada completamente en JavaScript (ES6+), HTML y CSS y empaquetada de manera automatizada en el framework Angular 12. Utilizando datos de una API.
-
+La lógica del proyecto esta implementada completamente en TypeScript, HTML y CSS y empaquetada de manera automatizada en el framework Angular 12. Utilizando datos de una API.
 La aplicación es un Single Page App. Mobile First
 - username: mor_2314
 - password: 83r5^_
@@ -41,6 +40,7 @@ Yo como usuario quiero poder filtrar los productos por categoria para poder enco
 - Disminuye productos con el boton -
 - Elimina productos con el boton x
 - Puede ver el total de los productos
+- La data del carrito tiene persistencia
 
 ## 3. Prototipo de alta fidelidad
 Se realizó el prototipado(mobile y dekstop) en Figma
