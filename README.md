@@ -31,6 +31,7 @@ Yo como usuario quiero poder filtrar los productos por categoria para poder enco
 *Criterios de aceptación
 - Filtra por categoria
 - Añade productos al carrito
+- Se ve bien en mobile
 
 Historia de usuario 2: Usuario que desea aumentar, disminuir y eliminar productos del carrito de compras
 Yo como usuario quiero poder filtrar los productos por categoria para poder encontrarlos mas rápido y asi añadirlos al carrito de compras
@@ -41,6 +42,7 @@ Yo como usuario quiero poder filtrar los productos por categoria para poder enco
 - Elimina productos con el boton x
 - Puede ver el total de los productos
 - La data del carrito tiene persistencia
+- Se ve bien en mobile
 
 ## 3. Prototipo de alta fidelidad
 Se realizó el prototipado(mobile y dekstop) en Figma
