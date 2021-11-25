@@ -7,24 +7,30 @@
         </div>
     </header>
     <section class="container-allcardsProd">
-        <div class="container-cardProd" *ngFor="let product of cart">
-            <div class="img-products-container">
-                <img class="img-products" src="{{product.data.image}}">
+        <div class="container-card" *ngFor="let product of cart">
+            <div class="btn-delete">
+                <button (click)="deleteItem(product)" ><i class="fas fa-times"></i></button>
             </div>
-            <div class="products-info">
-                <p>{{product.data.title | slice:0:20}}</p>
-                <p class="price-tag">${{product.data.price * product.amount | number: '1.0-2'}}</p>
-                <button (click)="changeQuantity(base,product)">+</button>
-                <button>{{product.amount}}</button>
-                <button (click)="changeQuantity(-base,product)">-</button>
-                <button (click)="deleteProduct(product.data.id)"><i class="far fa-trash-alt"></i></button>
-            </div>
+            <div class="container-cardProd">
+                <div class="img-products-container">
+                    <img class="img-products" src="{{product.data.image}}">
+                </div>
+                <div class="container-info">
+                    <p>{{product.data.title | slice:0:20}}</p>
+                        <p class="price-tag">${{product.data.price * product.amount | number: '1.0-2'}}</p>
+                    <div class="container-btns">
+                        <button (click)="changeQuantity(base,product)">+</button>
+                        <button>{{product.amount}}</button>
+                        <button (click)="changeQuantity(-base,product)">-</button>
+                    </div>
+                    </div>
+                </div>
+
         </div>
 
     </section>
     <footer>
-        <h3>Total</h3>
-        <p>${{total | number: '1.0-2'}}</p>
-        <button>Buy Now</button>
+        <p>TOTAL: ${{total | number: '1.0-2'}}</p>
+        <button (click)="endOrder()">Buy Now</button>
     </footer>
 </main>

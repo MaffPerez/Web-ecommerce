@@ -1,28 +1,41 @@
 
 <!------------------ Tarjetas de los Productos -------------------->
 <section class="container-allProducts" *ngIf="filteredProducts.length<1; else template">
-    <div class="container-products" *ngFor="let item of data" (click)="addCart(item.id, item)">
-
-            <div class="img-products-container">
-                <img class="img-products" src="{{item.image}}">
+    <div class="container-products" *ngFor="let item of data">
+            <div class="header-card">
+                <p>{{item.category | uppercase}}</p>
+            </div>
+            <div class="body-card">
+                <div class="img-products-container">
+                    <img class="img-products" src="{{item.image}}">
+                    </div>
+                <div class="info-card">
+                    <p>{{item.title | slice:0:10}}</p>
+                    <p class="tag-price">${{item.price}}</p>
                 </div>
 
-            <div class="container-info">
-                <p>{{item.title | slice:0:20}}</p>
-                <p class="tag-price">${{item.price}}</p>
-                </div>
+            </div>
+            <button *ngIf="item.statusProduct == undefined" (click)="addCart(item.id, item);changeStatusProduct(item) " class="btn-add">Añadir <i class="fas fa-shopping-cart"></i></button>
+            <button *ngIf="item.statusProduct == true" class="btn-add-active" > Añadido <i class="fas fa-check-circle"></i></button>
     </div>
 </section>
 <ng-template #template>
     <section class="container-allProducts">
-        <div class="container-products" *ngFor="let product of filteredProducts">
-                <div class="img-products-container">
-                    <img class="img-products" src="{{product.image}}">
+        <div class="container-products" *ngFor="let product of filteredProducts" >
+                <div class="header-card">
+                    <p>{{product.category | uppercase}}</p>
+                </div>
+                <div class="body-card">
+                    <div class="img-products-container">
+                        <img class="img-products" src="{{product.image}}">
+                        </div>
+                    <div class="info-card">
+                        <p>{{product.title | slice:0:10}}</p>
+                        <p class="tag-price">${{product.price}}</p>
                     </div>
-                <div class="container-info">
-                    <p>{{product.title | slice:0:20}}</p>
-                    <p class="tag-price">${{product.price}}</p>
-                    </div>
+                </div>
+                <button *ngIf="product.statusProduct == undefined" (click)="addCart(product.id, product);changeStatusProduct(product) " class="btn-add">Añadir <i class="fas fa-shopping-cart"></i></button>
+                <button *ngIf="product.statusProduct == true" class="btn-add-active" > Añadido <i class="fas fa-check-circle"></i></button>
         </div>
     </section>
 </ng-template>

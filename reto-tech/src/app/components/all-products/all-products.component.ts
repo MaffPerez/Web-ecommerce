@@ -17,11 +17,14 @@ export class AllProductsComponent implements OnInit, OnChanges {
   data:any[] = []
   filteredProducts:any[] = [];
   cart: any[] = [];
+  base: number = 1;
+  amount: number = 1;
+  
 
   ngOnInit(): void {
     this.productsService.getProducts().subscribe((element) => {
       this.data = element;
-      // console.log(this.data);
+      console.log(this.data);
     });
   }
 
@@ -41,15 +44,29 @@ export class AllProductsComponent implements OnInit, OnChanges {
     this.filteredProducts = this.data.filter((item) => item.category == this.getClass);
   }
 
+  changeAmount(base:number, item:any){
+    if (item.amount + base < 1) {
+      item.amount === 1;
+    }else{
+      item.amount= item.amount + base
+    }
+  }
+
   addCart(id:any, data:Object){
     const productSelected = this.cart.find((product) => product.id == id);
     if(productSelected === undefined){
       this.cart.push({
         data,
-        amount:1
+        amount:1,
+        statusProduct:true
       })
       console.log(this.cart)
       localStorage.setItem('cart', JSON.stringify(this.cart))
     }
   }
+
+  changeStatusProduct(product:any){
+    product.statusProduct = !product.statusProduct
+  }
+
 }

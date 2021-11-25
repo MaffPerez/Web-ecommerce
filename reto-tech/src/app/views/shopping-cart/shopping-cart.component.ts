@@ -39,7 +39,7 @@ export class ShoppingCartComponent implements OnInit {
 
   getTotalAmount(){
     this.total = this.cart
-    .map((item: { amount: number; data: { price:number} }) => item.amount * item.data.price)
+    .map((item: { amount: number; data: {price:number} }) => item.amount * item.data.price)
     .reduce((acc: any, item: any) => (acc += item), 0);
   }
 
@@ -47,4 +47,19 @@ export class ShoppingCartComponent implements OnInit {
     this.cart = this.cart.filter((product:{data:{id:string} }) => product.data.id !== id)
     this.getTotalAmount();
   }
+
+  deleteItem(product:any){
+    const index = this.cart.indexOf(product);
+    if (index > -1) {
+      this.cart.splice(index, 1);
+      this.getTotalAmount();
+    }
+    return this.cart;
+  }
+
+  endOrder(){
+    alert("Gracias por su compra!!");
+    this.router.navigate(['home']);
+  }
+
 }
