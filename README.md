@@ -19,6 +19,7 @@ La aplicación es un Single Page App. Mobile First
 ## 2. Historias de usuario
 
 Historia de usuario 1: Usuario que desea observar los productos
+
 Yo como usuario con cuenta quiero logearme en la página para poder ver los productos
 
 *Criterios de aceptación
